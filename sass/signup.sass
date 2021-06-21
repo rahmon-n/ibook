@@ -1,0 +1,107 @@
+*
+    margin: 0px
+    padding: 0px
+    box-sizing: border-box
+body
+    background-color: #378b29
+    background-image: linear-gradient(315deg, #378b29 0%, #ffffff 74%)
+.limiter
+    width: 100%
+    min-height: 100vh
+    margin: 0 auto
+
+    .container
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 15px
+
+    .wrap-login
+        width: 390px
+
+    .form
+        padding: 80px 0
+        width: 100%
+        &_avatar
+            text-align: center
+            font-size: 80px
+            color: #333333
+            margin-bottom: 30px
+        &_title
+            font-size: 39px
+            color: #333333
+            line-height: 1.2
+            text-align: center
+            margin-bottom: 65px
+        label
+            display: block
+            margin-bottom: 15px
+            font-size: 20px
+        .box
+            margin-bottom: 50px
+            border-bottom: 2px solid #9c9b9b
+            color: #555
+            width: 100%
+
+            i
+                margin-right: 5px
+
+            input
+                width: 90%
+                height: 50px
+                font-size: 15px
+                background: transparent
+                outline: none
+                border: none
+
+    .signup_btn
+        display: flex
+        justify-content: center
+        margin-bottom: 25px
+        button
+            outline: none !important
+            border: none
+            background: #333
+            height: 50px
+            width: 100%
+            border-radius: 25px
+            box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5)
+            
+            font-size: 16px
+            color: #fff
+            line-height: 1.2
+            transition: all 0.4s
+            text-transform: uppercase
+            &:hover
+                background-color: #57b846
+                box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5)
+    .signup
+        color: #555
+        &_link
+            color: #469339
+            text-decoration: none
+    .home
+        position: absolute
+        top: 35px
+        right: 50px
+
+        a
+            padding: 14px
+            color: #fff
+            background: #333
+            border-radius: 25px
+            transition: all 0.4s
+            text-decoration: none
+            text-transform: uppercase
+            box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5)
+            
+            &:hover
+                background-color: #57b846
+                box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5)
+
+@media screen and ( max-width: 768px )
+    .limiter .home
+        top: 25px
+        right: 10px
+    

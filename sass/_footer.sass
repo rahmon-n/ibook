@@ -1,0 +1,48 @@
+footer
+    display: flex
+    align-items: center
+    background-color: #875ece
+    height: 200px
+
+    .info
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .contacts
+            display: flex
+            flex-direction: column
+            .contact_links
+                color: #dad0d0
+                font-size: 20px
+                text-decoration: none
+                text-transform: uppercase
+                transition: all .4s
+                margin-top: 15px
+                &:hover
+                    color: #fff 
+                    
+        .social_medias
+            a
+                color: #dad0d0
+                font-size: 25px
+                margin-right: 15px
+                transition: all .4s
+                &:hover
+                    color: #fff
+
+@media screen and ( max-width: 1170px )
+    footer .info
+        justify-content: space-around
+        flex-wrap: wrap
+
+@media screen and ( max-width: 590px )
+    .info
+        text-align: center
+        .contacts
+            margin-bottom: 25px
+
+@media screen and ( max-width: 435px )
+    footer .info .contacts .contact_links
+        font-size: 18px
+    .social_medias
+        padding-bottom: 10px

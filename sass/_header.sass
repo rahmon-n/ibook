@@ -1,0 +1,194 @@
+$color: #dad0d0
+
+.header
+    position: absolute
+    width: 100%
+    top: 0 
+    left: 0
+    background: green
+
+    
+    &_inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 50px
+        .header_logo
+            a
+                text-decoration: none
+                color: $color
+                font-size: 18px
+                text-transform: uppercase
+                letter-spacing: 2px
+                transition: all .3s
+                &:hover
+                    color: #fff
+        
+        .toggle
+            display: none
+            font-size: 25px
+            color: $color
+            cursor: pointer
+            
+
+        
+
+        
+    .nav
+        display: flex
+
+        &_links
+            display: flex
+            list-style: none
+            font-size: 18px
+            color: $color
+            text-transform: none
+            li
+                margin-right: 18px
+                color: $color
+                cursor: pointer
+                max-width: 100px
+                &:hover
+                    color: #fff
+            .janr
+                .down
+                    display: block
+                &_list
+                    display: none
+                    list-style: none
+                    position: absolute
+                    background: green
+                    padding: 0 5px
+                    
+                    li
+                        margin: 10px 0 
+
+                    
+            a
+                text-decoration: none
+                color: $color
+                cursor: pointer
+                transition: all .3s
+
+                &:hover
+                    color: #fff
+                
+        .admin
+            position: relative
+            display: inherit
+            margin-left: 10px
+            align-items: center
+            color: $color
+            cursor: pointer
+            &:hover
+                color: #fff
+            .show2
+                display: block !important
+
+            .logout-btn
+                display: none
+                position: absolute
+                top: 45px
+                left: 5px
+                padding: 10px 25px
+                color: #fff
+                background: #333
+                border-radius: 25px
+                transition: all 0.4s
+                text-decoration: none
+                text-transform: uppercase
+                box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5)
+                &:hover
+                    background-color: #57b846
+                    box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5)
+                    
+        .sign_up
+            font-size: 18px
+            max-width: 100px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap 
+            color: $color
+            &:hover
+                color: #fff
+        
+
+@media screen and ( max-width: 768px )
+    .logout-btn
+        left: 0
+        right: 0
+        margin: 0 auto
+        text-align: center
+    .show
+        transform: translate(0) !important
+    
+    .header .nav
+        transform: translate(-100%)
+        transition: all 0.3s linear
+        flex-direction: column
+        width: 40%
+        background-color: rgba(0, 0, 0, .75)
+        position: absolute
+        left: 0
+        top: 100%
+        height: 632px
+        padding: 45px 0
+        align-items: center 
+    
+        &_links
+            flex-direction: column
+            li
+                height: 50px
+                font-size: 20px
+                margin-bottom: 25px
+                
+
+        .admin
+            height: 50px
+            font-size: 20px
+            margin: 0
+            
+            &::before
+                content: "Profil:"
+                display: block
+                color: #adadad
+
+            .sign_up
+                display: block
+                font-size: 20px
+                max-width: 115px
+                margin-left: 8px
+    
+    .header_inner .toggle
+        display: block
+    
+    
+    .height
+        height: 180px !important
+    
+    .header .nav_links .janr_list
+        background-color: transparent
+
+
+@media screen and ( max-width: 500px )
+    .header .nav
+        width: 45%    
+
+@media screen and ( max-width: 440px )
+    .header_inner .header_logo a
+        letter-spacing: normal
+    .header .nav
+        width: 100%
+        height: auto
+        text-align: center
+        padding: 45px 0 
+    .admin
+        justify-content: center
+
+@media screen and ( max-width: 360px )
+    .header_logo
+        width: 88px
+        white-space: nowrap
+        overflow: hidden
+        .header_title
+            margin-left: 8px

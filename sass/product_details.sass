@@ -1,0 +1,180 @@
+@import '_header'
+@import '_footer'
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.container
+    max-width: 1140px
+    width: 100%
+    margin: 0 auto
+
+.intro
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 700px
+    background: url('https://images.pexels.com/photos/2663851/pexels-photo-2663851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center center/cover no-repeat
+    .search
+        text-align: center
+        &_header
+            color: #fff
+            font-size: 30px
+            text-shadow: 1px 1px #000
+        &_input
+            width: 300px
+            background: #fff
+            height: 50px
+            border: none
+            outline: 0
+            margin-top: 15px
+            padding: 0 20px
+            border-radius: 25px 0 0 25px
+            font-size: 18px
+        &_btn
+            width: 100px
+            height: 50px
+            border-radius: 0 25px 25px 0
+            border: 0
+            font-size: 18px
+            margin-left: -4px
+            margin-bottom: 5px
+            background-color: yellow
+            cursor: pointer
+.login_btn
+        margin-top: 55px
+        padding: 12px 50px
+        font-size: 18px
+        text-decoration: none
+        color: #fff
+        border-radius: 25px
+        background-color: #ff1900
+        transition: .5s all
+
+        &:hover
+            padding: 12px 60px
+            // margin-left: -10px   
+            background-color: #610cb1
+            box-shadow: 0 0 50px #d603ba
+
+.product_name
+    font-size: 40px
+    margin-bottom: 40px
+    text-align: center
+
+.annotation
+    padding: 70px 0
+    &_content
+        display: flex
+        justify-content: space-around
+        padding: 0 15px
+    &_img
+        width: 350px
+        height: 450px
+        box-shadow: 0 0 50px #000
+    &_item
+        width: 600px
+    
+    &_text
+        font-size: 18px
+        margin-bottom: 30px
+.book_info p 
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 10px
+.buy-btn
+    display: inline-block
+    padding: .75rem 1.25rem
+    border-radius: 10rem
+    color: #fff
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 15px
+    letter-spacing: .15rem
+    transition: all .3s
+    position: relative
+    overflow: hidden
+    z-index: 1
+    margin-top: 50px
+
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: #0cf
+        border-radius: 10rem
+        z-index: -2
+
+    &:before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0%
+        height: 100%
+        background-color: darken(#0cf, 15%)
+        transition: all .3s
+        border-radius: 10rem
+        z-index: -1
+
+    &:hover
+        color: #fff
+        &:before
+            width: 100%
+
+@media screen and ( max-width: 1024px )
+    .annotation_img
+        width: 32%
+    .annotation_item
+        width: 55%
+
+@media screen and ( max-width: 900px )
+    .annotation_img
+        height: 380px
+@media screen and ( max-width: 900px )
+    .annotation_img
+        height: 335px
+@media screen and ( max-width: 650px )
+    .annotation_img
+        height: 275px
+@media screen and ( max-width: 558px )
+    .annotation_content
+        flex-wrap: wrap
+
+    .annotation_img
+        width: 225px
+        height: 270px
+        margin-bottom: 25px
+        
+    .annotation_item
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 500px
+
+        .book_info
+            text-align: center
+
+        .annotation_text
+            text-align: justify
+        
+        .buy-btn
+            display: block
+        
+
+@media screen and ( max-width: 415px )
+    .intro .search_input
+        width: 250px
+    .intro .search_btn
+        width: 65px
+
+@media screen and ( max-width: 320px )
+    .intro .search_input
+        width: 240px
+    .intro .search_btn
+        width: 60px
